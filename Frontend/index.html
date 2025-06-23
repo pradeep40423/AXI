@@ -2,29 +2,19 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Flask Request Example</title>
+  <title>AXI e-Commerce Portal</title>
 </head>
 <body>
-  <input type="text" id="inputBox" placeholder="Enter something">
-  <button onclick="sendRequest()">Send</button>
-  <p id="responseText"></p>
-
-  <script>
-    function sendRequest() {
-      const message = document.getElementById('inputBox').value;
-
-      fetch('http://localhost:5000/api/process', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ message: message })
-      })
-      .then(response => response.json())
-      .then(data => {
-        document.getElementById('responseText').innerText = data.response;
-      });
-    }
-  </script>
+  <h1>Welcome to the AXI e-Commerce Portal</h1>
+  <p>This is the main page of the AXI e-Commerce Portal.</p>
+  <nav>
+    <ul>
+      <li><a href="./login.html">Login</a></li>
+      <li><a href="./signup.html">Signup</a></li>
+    </ul>
+  </nav>
+  <footer>
+    <p>&copy; 2023 AXI e-Commerce Portal</p>
+  </footer>
 </body>
 </html>
